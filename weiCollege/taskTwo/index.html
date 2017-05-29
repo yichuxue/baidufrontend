@@ -22,6 +22,12 @@
             table thead th{background:#000; color:#fff; text-align:left;font-size:12px;}
             .last-tr{background:#ccc;}
             .side-title{border-left:3px solid #ccc; text-indent:.5em;}
+            .form p span{display:inline-block; width:350px; text-align:right; margin-right:16px;}
+            .form p small{display:inline-block; margin-left:340px; color:#666;}
+            textarea{vertical-align:top; width:60%;}
+            .form input[type='submit']{
+                width:100%; height:40px; border-radius:5px; border:0; display:block; background:#3355D0; color:#fff; font-size:16px;
+            }
         </style>
     </head>
     <body>
@@ -111,27 +117,36 @@
                 </tbody>
             </table>
         </div>
-        <div class="body">
+        <div class="body form">
             <h2 class="side-title">这里以后是一个侧栏，这是侧栏的标题</h2>
             <h2>侧栏注册窗口标题</h2>
-            <p>请输入邮箱地址：<input type="text" placeholder="这是一个文本输入框" /></p>
-            <p>邮箱地址请按要求格式输入</p>
-            <p>请输入密码：<input type="passoword" placeholder="这是一个文本输入框" />
-            请重复输入密码：<input type="password" placeholder="这是一个文本输入框" />
+            <form action="" method="post">
+            <p><span>请输入邮箱地址</span><input type="text" placeholder="这是一个文本输入框" /></p>
+            <p><small>邮箱地址请按要求格式输入</small></p>
+            <p><span>请输入密码</span><input type="passoword" placeholder="这是一个文本输入框" />
+            <p><span>
+            请重复输入密码</span><input type="password" placeholder="这是一个文本输入框" />
             </p>
-            <p>密码为6-16位因为数字</p>
-            <p>性别：<input type="radio" name='sex' />男<input type="radio" name="sex" />
+            <p><small>密码为6-16位因为数字</small></p>
+            <p><span>性别</span><input type="radio" name='sex' checked/>男<input type="radio" name="sex" /></p>
+            <p><span>城市</span>
             <select value="北京">
                 <option name="北京" >北京</option>
                 <option name="上海" >上海</option>
                 <option name="广州" >广州</option>
                 <option name="深圳" >深圳</option>
             </select>
+            </p>
+            <p><span>爱好</span>
             <input type="checkbox" />运动
             <input type="checkbox" />艺术
             <input type="checkbox" />科学
-            个人描述：<textarea name="" id="" cols="30" rows="10"></textarea>
             </p>
+            <p>
+            <span>个人描述</span><textarea name="" id="" cols="30" rows="10" placeholder="这是一个多行文本输入框"></textarea>
+            </p>
+            <p><input type="submit" value="确认提交" /></p>
+            </form>
             <p>版权所有&#169;</p>
         </div>
     </body>
